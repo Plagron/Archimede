@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include '../header.php'; ?>
 
 <header id="cima">
     <div class="header-content">
@@ -73,4 +73,4 @@
 </section>
 
 
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>
