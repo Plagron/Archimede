@@ -61,7 +61,7 @@ else {
 
     if ($res === TRUE) {
         $conn->close();
-        header('Location: ../utility_pages/conferma_creazione_account.html');
+        header('Location: ../utility_pages/conferma_creazione_account.php');
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }
