@@ -65,7 +65,7 @@ if(isset($user) && isset($psw)) {
 
 else
 {
-    header("Location: ../err_login.php");   // ERRORE di login... user o psw errati.
+    header("Location: ../utility_errore_login.php");   // ERRORE di login... user o psw errati.
     exit();
 }
 
@@ -101,7 +101,7 @@ if(isset($_SESSION['isValid']))
 }
 else
 {
-    header("location: ../not_login.php"); // In caso la variabile di sessione non fosse settata.
+    header("location: ../utility_not_logged.php"); // In caso la variabile di sessione non fosse settata.
     exit();
 }
 

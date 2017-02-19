@@ -42,7 +42,7 @@ $check="SELECT * FROM utenti WHERE email = '$email'";
 $result = $conn->query($check);
 if($result->num_rows){
     $conn->close();
-    header('Location: ../utility_pages/utente_già_presente.html');
+    header('Location: ../utility_utente_già_presente.php');
 }
 else {
 
@@ -61,7 +61,7 @@ else {
 
     if ($res === TRUE) {
         $conn->close();
-        header('Location: ../utility_pages/conferma_creazione_account.php');
+        header('Location: ../utility_conferma_creazione_account.php');
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }
