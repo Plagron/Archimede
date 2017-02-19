@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="64bed853-2805-4e5f-99ca-4e2785e2deb5" name="XAMPP Apache" url="http://localhost/Archimede">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\Archimede" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
