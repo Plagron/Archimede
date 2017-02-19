@@ -9,6 +9,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-scope>my_archischool:</introspection-scope>
       <resolve-scope>my_archischool:</resolve-scope>
     </data-source>
   </component>
