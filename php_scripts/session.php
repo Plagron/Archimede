@@ -34,7 +34,7 @@ if(isset($user) && isset($psw)) {
         $loggato2 = $conn->query("SELECT * FROM docenti WHERE docenti.email='".$user."'");
         $rows2 = $loggato2->fetch_assoc();
 
-        $_SESSION['isValid'] = true;
+        $_SESSION['isValid'] = true; //flag che tiene traccia se è presente una sessione.
         $_SESSION['user'] = $user;
         $_SESSION['password'] = $psw;
         $_SESSION['nome'] = $rows['nome'];

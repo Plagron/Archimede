@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set('Europe/Rome');
+session_start();
 $date = date('Y-m-d');
 
 
@@ -60,6 +61,11 @@ else {
     $res = $conn -> query($query2);
 
     if ($res === TRUE) {
+        $_SESSION['isValid'] = true; //flag che tiene traccia se è presente una sessione.
+        $_SESSION['user'] = $email;
+        $_SESSION['password'] = $password;
+        $_SESSION['nome'] = $nome;
+        $_SESSION['cognome']= $cognome;
         $conn->close();
         header('Location: ../utility_conferma_creazione_account.php');
     } else {
