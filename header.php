@@ -35,6 +35,7 @@
     <![endif]-->
 
 </head>
+
 <body id="page-top">
 
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -58,7 +59,7 @@
                     <a class="page-scroll" href="#contact">Contatti</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="utility_pages/informazioni.php">Info</a>
+                    <a class="page-scroll" href="utility_informazioni.php">Info</a>
                 </li>
                 <?php if(!isset($_SESSION['isValid'])){ ?>
                     <li class="dropdown">

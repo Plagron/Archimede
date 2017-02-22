@@ -15,9 +15,9 @@ function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' )
     $datetime1 = date_create($date_1);
     $datetime2 = date_create($date_2);
 
-    $interval = date_diff($datetime2, $datetime1);
+    $interval = $datetime1->diff($datetime2);
 
-    return $interval->format($differenceFormat);
+    return $interval->format('%R%a');
 
 }
 
@@ -42,21 +42,23 @@ if(isset($user) && isset($psw)) {
 
         if ($loggato2->num_rows != 0)
         {
-            $_SESSION['prof'] = 1;
+            $_SESSION['prof'] = true;
             $_SESSION['dataiscriz'] = $rows2['pagamento_iscrizione'];
             $date = date('Y-m-d');
-            if ((dateDifference($date,$_SESSION['dataiscriz'],'%a')) < 0)   // <-------!!!!!!!!!!!!!!!!!!!!da sistemare
+            $_SESSION['ggAttività']=dateDifference($_SESSION['dataiscriz'],$date,'%a'); // variavile che memorizza i giorni di attività del profilo rispetto alla data di registrazione.
+
+            if ( $_SESSION['ggAttività'] > 365)   // controllo Attività di un prof per settare il parametro.
             {
-                $_SESSION['attivo'] = 0;//$rows['attivo']; // il flag per individuare un professore iscritto da uno NON
+                $_SESSION['attivo'] = false;//$rows['attivo']; // il flag per individuare un professore NON attivo.
             }
             else
             {
-                $_SESSION['attivo'] = 1;
+                $_SESSION['attivo'] = true;  // il flag per individuare un professore NON attivo.
             }
         }
         else
         {
-            $_SESSION['prof'] = 0;
+            $_SESSION['prof'] = false; // il flag per individuare uno studente.
         }
 
     }
@@ -80,21 +82,21 @@ if($user=="Luca@school.it" && $psw=="vittoria") // controllo AMMINISTRATORE
 
 if(isset($_SESSION['isValid']))
 {
-    if ($_SESSION['prof'] == 0)
+    if ($_SESSION['prof'] == false)
     {
         header("location: ../studente_loggato.php");//Reindirizzamento pagina di profilo STUDENTE.
         exit();
     }
     else
     {
-        if ($_SESSION['attivo'] == 1)
+        if ($_SESSION['attivo'] == true)
         {
             header("location: ../docente_loggato.php");//Reindirizzamento pagina di profilo PROFESSORE.
             exit();
         }
         else
         {
-            header("location: ../docente_scaduto.php"); //Reindirizzamento pagina PROFESSORE SCADUTO. (deve rinnovare l'abbonamento)
+            header("location: ../docente_loggato_nonAttivo.php"); //Reindirizzamento pagina PROFESSORE SCADUTO. (deve rinnovare l'abbonamento)
             exit();
         }
     }
