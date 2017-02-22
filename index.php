@@ -24,7 +24,7 @@
                     <h2 class="section-heading">Ricerca i tuoi professori</h2>
                     <hr class="light">
                     <p class="text-faded">cerca il professore più adatto a te!</p>
-                    <a href="Ricrca_prof.php" class="page-scroll btn btn-default btn-xl sr-button">Cerca</a>
+                    <a href="ricrca_Prof.php" class="page-scroll btn btn-default btn-xl sr-button">Cerca</a>
                 </div>
             </div>
         </div>

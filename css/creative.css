@@ -242,13 +242,15 @@ aside {
 
 
 header {
+  background-position: center;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
   position: relative;
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center;
   background-image: url('../img/head.jpg');
   text-align: center;
   color: white;
