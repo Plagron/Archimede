@@ -1,11 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "my_archischool";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+include ('DB_connection.php');
 
 // Check connection
 if ($conn->connect_error) {
