@@ -13,6 +13,7 @@ include 'header.php';
     <br><br><br><br>
     <div style="align-items: center; align-content: center; display: inline">
         <?php
+            $loggato = $conn->query("SELECT * FROM utenti");
             $rows = $loggato->fetch_row();
             if($rows > 0) {
                 while ($docenti = mysqli_fetch_array($loggato)) {
