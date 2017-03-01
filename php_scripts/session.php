@@ -1,7 +1,12 @@
 <?php
 date_default_timezone_set('Europe/Rome');
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "my_archischool";
 
-include ('DB_connection.php');
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
 
 session_start();
 

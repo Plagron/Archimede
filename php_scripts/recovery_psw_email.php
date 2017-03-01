@@ -1,8 +1,5 @@
 
 <?php
-
-include ('DB_connection.php');
-
 ini_set('SMTP', 'smtp.live.com.');
 ini_set('smtp_port', 587);
 // the message
