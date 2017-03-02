@@ -23,9 +23,8 @@ include "php_scripts/DB_connection.php";
             <td><h3>Sesso</h3></td>
         </tr>
 <?php
-$loggato = $conn->query("SELECT * FROM utenti ORDER BY data_iscrizione DESC ");
-$rows = $loggato->fetch_row();
-if($rows > 0) {
+$loggato = $conn->query("SELECT * FROM utenti,docenti WHERE utenti.email=docenti.email ORDER BY data_iscrizione DESC ");
+
     while ($utenti = mysqli_fetch_array($loggato)) {
         $email = $utenti["email"];
         $nome = $utenti["nome"];
@@ -35,7 +34,7 @@ if($rows > 0) {
         $data_iscrizione = $utenti["data_iscrizione"];
         echo "<tr><td>".$email."</td><td>".$nome."</td><td>".$cognome."</td><td>".$data_iscrizione."</td><td>".$indirizzo."</td><td>".$sesso."</td><td><a href='index.php?email=$email'>elimina</a></td></tr>";
     }
-}
+
 ?>
     </table>
 </div>

@@ -13,21 +13,19 @@ include 'header.php';
     <br><br><br><br>
     <div style="align-items: center; align-content: center; display: inline">
         <?php
-            $loggato = $conn->query("SELECT * FROM utenti");
-            $rows = $loggato->fetch_row();
-            if($rows > 0) {
-                while ($docenti = mysqli_fetch_array($loggato)) {
-                    $nome = $docenti["nome"];
-                    $cognome = $docenti["cognome"];
-                    echo " </div><div><img href=\"#page-top\" src=\"img/logo.png\" width=\"300\" height=\"300\"> </img> </div>";
-                    echo "<div style='-webkit-text-fill-color: white;'>" . $nome . " " . $cognome . "</div>";
-                }
+        if(isset($_SESSION['isValid']) && $_SESSION['isValid']) {
+            $loggato = $conn->query("SELECT * FROM utenti,docenti WHERE utenti.email=docenti.email ORDER BY data_iscrizione DESC ");
+            while ($docenti = mysqli_fetch_array($loggato)) {
+                $nome = $docenti["nome"];
+                $cognome = $docenti["cognome"];
+                echo " </div><div><img href=\"#page-top\" src=\"img/logo.png\" width=\"300\" height=\"300\"> </img> </div>";
+                echo "<div style='-webkit-text-fill-color: white;'>" . $nome . " " . $cognome . "</div>";
             }
-            else
-            {
-                echo"<h1 id=\"homeHeading\">Non sono presenti professori!!!</h1>";
-
-            }
+        }
+        else
+        {
+            include 'registra_studente.php';
+        }
         ?>
 
     </div>
