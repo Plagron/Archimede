@@ -25,15 +25,14 @@ include 'header.php';
             }
             else
             {
-                echo"<header><h1 id=\"homeHeading\">Non sono presenti professori con le specifiche da lei richeste!</h1></header>";
+                echo"<h1 id=\"homeHeading\">Non sono presenti professori!!!</h1>";
 
             }
         ?>
 
     </div>
 </body>
+<?php include 'footer.php'; ?>
 
 
-<footer style="background-color: inherit">
-<?php include 'footer.php';?>
-</footer>
+
