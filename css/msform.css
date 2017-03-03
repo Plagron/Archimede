@@ -227,28 +227,27 @@ h5 {
     font-weight: bold;
 }
 
-.input_container ul{
-    width: 100%;
+ul.ui-autocomplete.ui-menu{
+    width: 50%;
     border: 1px solid #eaeaea;
     position: absolute;
     z-index: 9;
     background: #eee;
     list-style: none;
-    border-radius: 15px;
+    border-radius: 5px;
+    border: 1px solid #3F3F3F;
 }
-.input_container ul li {
+ul.ui-autocomplete.ui-menu li{
     padding: 2px;
     font-size: 15px;
     font-weight: 600;
     color: #3F3F3F;
 }
-.input_container ul li:hover {
+ul.ui-autocomplete.ui-menu li:hover {
     background: #999;
-    border-radius: 15px;
+    border-radius: 5px;
 }
-#regione_list_id, #comune_list_id{
-    display: none;
-    background: red;
-}
+
+
 
 

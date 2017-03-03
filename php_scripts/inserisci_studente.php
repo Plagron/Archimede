@@ -12,7 +12,8 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 $email = $_POST['email'];
-$password = $_POST['password'];
+$psw = $_POST['password'];
+$password = password_hash($psw, PASSWORD_DEFAULT);
 $nome = $_POST['nome'];
 $cognome = $_POST['cognome'];
 $indirizzo = $_POST['indirizzo'];
