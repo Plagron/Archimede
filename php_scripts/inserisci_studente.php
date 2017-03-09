@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 $email = $_POST['email'];
-$psw = $_POST['password'];
+$psw = crypt($email, $_POST['password']);
 $password = password_hash($psw, PASSWORD_DEFAULT);
 $nome = $_POST['nome'];
 $cognome = $_POST['cognome'];

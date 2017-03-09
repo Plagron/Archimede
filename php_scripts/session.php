@@ -17,7 +17,8 @@ function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' )
 }
 
 $user = filter_var($_POST['login_mail'], FILTER_SANITIZE_EMAIL); //  FILTER_SANITIZE_EMAIL solo x la email.
-$psw = filter_var($_POST['login_psw'],FILTER_SANITIZE_FULL_SPECIAL_CHARS); // ricordare di inserire i filtri anche nella registrazione (FILTER_SANITIZE_FULL_SPECIAL_CHARS x tutti!)
+$psw1 = filter_var($_POST['login_psw'],FILTER_SANITIZE_FULL_SPECIAL_CHARS); // ricordare di inserire i filtri anche nella registrazione (FILTER_SANITIZE_FULL_SPECIAL_CHARS x tutti!)
+$psw = crypt($user, $psw1);
 
 if(isset($user) && isset($psw)) {
     $loggato = $conn->query("SELECT * FROM utenti WHERE utenti.email = '" . $user . "' AND utenti.password = '" . $psw . "'");
