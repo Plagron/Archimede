@@ -1,0 +1,15 @@
+IMPORTANTE:
+
+-fare il DB definitivo con tutti i campi necessari al fuinzionamento generale.
+-sistemare la presentazione della lista dei professori.
+--inerire il controllo che mostri solo i rofessori attivi.
+-gestione email per il recupero della password.
+-creazione della pagina di modifica degli utenti.
+--i profesori devono avere la possibilità di stampare il proprio profilo.
+-creazione calendario a cui anno accesso solo i professori.
+
+secondario:
+
+-contatore delle visite sulla home page (io lo metterei fake... altrimnti si mangia il fegato a nonvedere nessuna visita).
+-sulla pagina amministratore visualizzare l'ultimo accesso di ogni utente.
+-a ogni regisrazione inseire l'atenticazione tramite email deglistudenti e predisporre un campo nel database che si setti una volta cliccato sul link nella email.
