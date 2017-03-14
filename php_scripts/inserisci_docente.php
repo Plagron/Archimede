@@ -11,18 +11,18 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-$email = $_POST['email'];
-$password = crypt($email, $_POST['password']);
-$nome = $_POST['nome'];
-$cognome = $_POST['cognome'];
-$indirizzo = $_POST['indirizzo'];
-$data_nascita_gg = $_POST['data_nascita_gg'];
-$data_nascita_mm = $_POST['data_nascita_mm'];
-$data_nascita_aa = $_POST['data_nascita_aa'];
-$data_nascita = $data_nascita_aa."-".$data_nascita_mm."-".$data_nascita_gg;
-$sesso = $_POST['sesso'];
-$comune = $_POST['comune'];
-$cellulare = $_POST['cellulare'];
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$password = filter_var(crypt($email, $_POST['password']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$nome = filter_var($_POST['nome'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$cognome = filter_var($_POST['cognome'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$indirizzo = filter_var($_POST['indirizzo'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$data_nascita_gg = filter_var($_POST['data_nascita_gg'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$data_nascita_mm = filter_var($_POST['data_nascita_mm'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$data_nascita_aa = filter_var($_POST['data_nascita_aa'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$data_nascita = filter_var($data_nascita_aa."-".$data_nascita_mm."-".$data_nascita_gg, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$sesso = filter_var($_POST['sesso'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$comune = filter_var($_POST['comune'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$cellulare = filter_var($_POST['cellulare'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 // Disponibility Check
 $disp_lun = false;

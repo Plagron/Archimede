@@ -67,9 +67,9 @@ else
     exit();
 }
 
+$admin = "Luca@school.it";
 
-
-if($user=="Luca@school.it" && $psw=="vittoria") // controllo AMMINISTRATORE
+if($user==$admin && $psw==crypt($admin,"vittoria")) // controllo AMMINISTRATORE
 {
     header("location: ../amministratore.php"); //reindirizzamento AMMINISTRATORE
     exit();
