@@ -1,8 +1,11 @@
 IMPORTANTE:
 
--fare il DB definitivo con tutti i campi necessari al fuinzionamento generale.
+-fare il DB definitivo con tutti i campi necessari al fuinzionamento generale. (FATTO!!!)
+-inserire nelle registrazioni:
+    --la spunta per il trattamento dei dati personali  la privacy.
+    --per i professori la possibilità di inserre le materie.
 -sistemare la presentazione della lista dei professori.
---inerire il controllo che mostri solo i professori attivi.
+    --inerire il controllo che mostri solo i professori attivi. (FATTO!!!)
 -gestione email per il recupero della password.
 -creazione della pagina di modifica degli utenti.
 --i profesori devono avere la possibilità di stampare il proprio profilo.

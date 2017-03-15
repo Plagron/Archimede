@@ -75,68 +75,74 @@
     <column id="27" parent="8" name="voto_medio">
       <data-type>float|0</data-type>
     </column>
-    <key id="28" parent="8" name="PRIMARY">
+    <column id="28" parent="8" name="Maerie">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <key id="29" parent="8" name="PRIMARY">
       <columns>email</columns>
       <primary>1</primary>
     </key>
-    <column id="29" parent="9" name="email">
+    <column id="30" parent="9" name="email">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="30" parent="9" name="cellulare">
+    <column id="31" parent="9" name="cellulare">
       <data-type>varchar(10)|0</data-type>
     </column>
-    <column id="31" parent="9" name="indirizzo_scolastico">
+    <column id="32" parent="9" name="indirizzo_scolastico">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="32" parent="9" name="anno_frequentazione">
+    <column id="33" parent="9" name="anno_frequentazione">
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="33" parent="9" name="PRIMARY">
+    <key id="34" parent="9" name="PRIMARY">
       <columns>email</columns>
       <primary>1</primary>
     </key>
-    <column id="34" parent="10" name="email">
+    <column id="35" parent="10" name="email">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="35" parent="10" name="password">
+    <column id="36" parent="10" name="password">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="36" parent="10" name="nome">
+    <column id="37" parent="10" name="nome">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="37" parent="10" name="cognome">
+    <column id="38" parent="10" name="cognome">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="38" parent="10" name="indirizzo">
+    <column id="39" parent="10" name="indirizzo">
       <mandatory>1</mandatory>
       <data-type>varchar(50)|0</data-type>
     </column>
-    <column id="39" parent="10" name="data_nascita">
+    <column id="40" parent="10" name="data_nascita">
       <mandatory>1</mandatory>
       <data-type>varchar(10)|0</data-type>
     </column>
-    <column id="40" parent="10" name="sesso">
+    <column id="41" parent="10" name="sesso">
       <mandatory>1</mandatory>
       <data-type>char(1)|0</data-type>
     </column>
-    <column id="41" parent="10" name="comune">
+    <column id="42" parent="10" name="comune">
       <mandatory>1</mandatory>
       <data-type>varchar(30)|0</data-type>
     </column>
-    <column id="42" parent="10" name="info">
+    <column id="43" parent="10" name="info">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="43" parent="10" name="data_iscrizione">
+    <column id="44" parent="10" name="data_iscrizione">
       <mandatory>1</mandatory>
       <data-type>date|0</data-type>
     </column>
-    <key id="44" parent="10" name="PRIMARY">
+    <column id="45" parent="10" name="foto">
+      <data-type>longblob|0</data-type>
+    </column>
+    <key id="46" parent="10" name="PRIMARY">
       <columns>email</columns>
       <primary>1</primary>
     </key>
