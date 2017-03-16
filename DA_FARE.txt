@@ -2,7 +2,7 @@ IMPORTANTE:
 
 -fare il DB definitivo con tutti i campi necessari al fuinzionamento generale. (FATTO!!!)
 -inserire nelle registrazioni:
-    --la spunta per il trattamento dei dati personali  la privacy.
+    -- il controllo sulla spunta per il trattamento dei dati personali  la privacy. (LA CHECKBOX è STATA INSERITA).
     --per i professori la possibilità di inserre le materie.
 -sistemare la presentazione della lista dei professori.
     --inerire il controllo che mostri solo i professori attivi. (FATTO!!!)

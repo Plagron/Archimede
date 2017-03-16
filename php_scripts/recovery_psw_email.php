@@ -3,17 +3,31 @@
 
 include ('DB_connection.php');
 
-ini_set('SMTP', 'smtp.live.com.');
-ini_set('smtp_port', 587);
-// the message
-$msg = "User: manuel32@hotmail.it\nPassword: ciaociao";
+require('PHPMailer/class.phpmailer.php');
+$mail=new PHPMailer();
 
-// use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($msg,70);
-$headers = "From: manuel32@hotmail.it";
-// send email
-mail("manuel32@hotmail.it","ArchimedeSchool_Recovery",$msg,$headers);
-//header("Location: ../index.php");
+$mail->CharSet = 'UTF-8';
+
+$body = 'User: manuel32@hotmail.it\nPassword: ciaociao';
+
+$mail->isSMTP();
+$mail->Host       = 'mail.archimedeschool.it';
+
+$mail->SMTPSecure = 'tls';
+$mail->Port       = 25;
+$mail->SMTPDebug  = 1;
+$mail->SMTPAuth   = true;
+
+$mail->Username   = 'info@archimedeschool.it';
+$mail->Password   = 'xmgA5044M';
+
+$mail->setFrom('info@archimedeschool.it', 'ArchimedeSchool');
+$mail->addReplyTo('manuel32@hotmail.it','no-reply');
+$mail->Subject = 'Recovery';
+$mail->msgHTML($body);
+
+
+$mail->send();
+
 ?>
 
-?>
