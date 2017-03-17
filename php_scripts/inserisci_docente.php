@@ -23,6 +23,7 @@ $data_nascita = filter_var($data_nascita_aa."-".$data_nascita_mm."-".$data_nasci
 $sesso = filter_var($_POST['sesso'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $comune = filter_var($_POST['comune'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $cellulare = filter_var($_POST['cellulare'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$materie = filter_var($_POST['materie'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 // Disponibility Check
 $disp_lun = false;
@@ -87,9 +88,9 @@ else {
           ('$email', '$password', '$nome', '$cognome', '$indirizzo', '$data_nascita', '$sesso', '$comune', '$date');";
 
     $query2 = "INSERT INTO docenti
-          (email, cellulare, disp_lun, disp_mar, disp_mer, disp_gio, disp_ven, disp_sab, disp_dom, prezzo_ora, pagamento_iscrizione, vuole_voto)
+          (email, cellulare, disp_lun, disp_mar, disp_mer, disp_gio, disp_ven, disp_sab, disp_dom, prezzo_ora, pagamento_iscrizione, vuole_voto, materie)
           VALUES
-          ('$email', '$cellulare', '$disp_lun', '$disp_mar', '$disp_mer', '$disp_gio', '$disp_ven', '$disp_sab', '$disp_dom','$prezzo_ora','$date','$vuole_voto');";
+          ('$email', '$cellulare', '$disp_lun', '$disp_mar', '$disp_mer', '$disp_gio', '$disp_ven', '$disp_sab', '$disp_dom','$prezzo_ora','$date','$vuole_voto','$materie');";
 
     $conn -> query($query);
     $res = $conn -> query($query2);

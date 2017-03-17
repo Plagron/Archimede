@@ -83,7 +83,12 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr><td colspan="10"><input type="number"  placeholder="Cellulare *" name="cellulare" minlength="10" maxlength="10" required/></td></tr>
+                                            <tr>
+                                                <td colspan="5"><input type="number"  placeholder="Cellulare *" name="cellulare" minlength="10" maxlength="10" required/></td>
+                                                <td colspan="5" >
+                                                    <input type="text" placeholder="Materie di competenza" name="materie" maxlength="50">
+                                                </td>
+                                            </tr>
                                             <tr>
                                                 <td colspan="5" rowspan="2" style="padding-bottom: 10px;">
                                                     <p>Disponibilità [Almeno una selezione] *</p>
@@ -102,6 +107,7 @@
                                                     <input type="checkbox" name="disp[]" value="dom">
                                                     <label>Domenica</label><br>
                                                 </td>
+
                                                 <td colspan="5" rowspan="1">
                                                     <input type="text" placeholder="Prezzo Orario [Testo Libero Max 50] *" name="prezzo_ora" maxlength="50" required>
                                                 </td>
@@ -118,7 +124,7 @@
                                             </tr>
                                         </table>
 
-                                        <input type="checkbox" name="disp[]" >
+                                        <input type="checkbox" name="disp[]" required>
                                         <label><h6>Richiesta di consenso al trattamento dei dati personali(ai sensi dell'articolo 13 del <a href="http://www.camera.it/parlam/leggi/deleghe/03196dl.htm">decreto legislativo numero 196/2003</a> in materia dei dati personali)</h6></label><br><br><br>
 
                                         <input id="submit_btn" type="submit" value="Registrati">

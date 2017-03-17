@@ -75,7 +75,7 @@
     <column id="27" parent="8" name="voto_medio">
       <data-type>float|0</data-type>
     </column>
-    <column id="28" parent="8" name="Maerie">
+    <column id="28" parent="8" name="materie">
       <data-type>varchar(50)|0</data-type>
     </column>
     <key id="29" parent="8" name="PRIMARY">

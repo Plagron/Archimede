@@ -3,31 +3,33 @@
 
 include ('DB_connection.php');
 
-require('PHPMailer/class.phpmailer.php');
+require 'PHPMailer/PHPMailerAutoload.php';
 $mail=new PHPMailer();
 
-$mail->CharSet = 'UTF-8';
+//$mail->CharSet = 'UTF-8';
 
-$body = 'User: manuel32@hotmail.it\nPassword: ciaociao';
 
 $mail->isSMTP();
-$mail->Host       = 'mail.archimedeschool.it';
+$mail->Host       = 'prohosting3.netsons.net';
 
 $mail->SMTPSecure = 'tls';
-$mail->Port       = 25;
+$mail->Port       = 465;
 $mail->SMTPDebug  = 1;
 $mail->SMTPAuth   = true;
-
 $mail->Username   = 'info@archimedeschool.it';
 $mail->Password   = 'xmgA5044M';
 
 $mail->setFrom('info@archimedeschool.it', 'ArchimedeSchool');
-$mail->addReplyTo('manuel32@hotmail.it','no-reply');
+$mail->addAddress('manuel32@hotmail.it', 'Manuel');
 $mail->Subject = 'Recovery';
-$mail->msgHTML($body);
+$mail->Body     = 'User: manuel32@hotmail.it\nPassword: ciaociao';
 
-
-$mail->send();
+if(!$mail->send()) {
+    echo 'Message was not sent.';
+    echo 'Mailer error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent.';
+}
 
 ?>
 

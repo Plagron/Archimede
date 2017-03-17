@@ -19,10 +19,9 @@ function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' )
 
 }
 ?>
-
-<body style="background-image: url('img/head.jpg');  background-attachment: fixed; background-repeat: no-repeat; height: 100%">
+<header style="background-image: url('img/head.jpg');  background-attachment: fixed; background-repeat: no-repeat; height: 100%; max-height: inherit">
     <br><br><br><br>
-    <div style="align-items: center; align-content: center; display: inline">
+    <div style="align-items: center; align-content: center; display: inline;">
         <?php
         if(isset($_SESSION['isValid']) && $_SESSION['isValid']) {
             $loggato = $conn->query("SELECT * FROM utenti,docenti WHERE utenti.email=docenti.email ORDER BY data_iscrizione DESC ");
@@ -36,13 +35,15 @@ function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' )
                     $email = $docenti['email'];
                     $nome = $docenti["nome"];
                     $cognome = $docenti["cognome"];
-                    $sesso = $docenti['sesso'];
+                    $sesso = $docenti["sesso"];
+                    $materie = $docenti["materie"];
+
                     if ($sesso == "M") {
                         echo " </div><div><img href=\"#page-top\" src=\"img/default_doc.png\" width=\"200\" height=\"200\"> </img> </div>";
                     } else {
                         echo " </div><div><img href=\"#page-top\" src=\"img/default_docF.png\" width=\"200\" height=\"200\"> </img> </div>";
                     }
-                    echo "<div style='-webkit-text-fill-color: white;'>" . $email . " " . $nome . " " . $cognome . "</div>";
+                    echo "<div style='-webkit-text-fill-color: black; align-content: center'>" . $email . "<br> " . $nome . " " . $cognome . "<br>".$materie."</div>";
                 }
             }
         }
@@ -53,8 +54,6 @@ function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' )
         ?>
 
     </div>
-</body>
-<?php include 'footer.php'; ?>
-
+</header>
 
 
