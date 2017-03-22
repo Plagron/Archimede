@@ -1,35 +1,38 @@
-
 <?php
+include 'DB_connection.php';
 
-include ('DB_connection.php');
+$email = $_POST['email'];
+$check = $conn->query("SELECT * FROM utenti WHERE utenti.email = '" . $email . "'");
 
-require 'PHPMailer/PHPMailerAutoload.php';
-$mail=new PHPMailer();
+if($check ->num_rows != 0) {
+    $to = $email;
+    $subject = "Recovery";
+    ini_set('SMTP', 'prohosting3.netsons.net');
+    ini_set('smtp_port', 465);
+    $message = "
+<html>
+<head>
+<title>Archimedeschool Recovery</title>
+</head>
+<body>
+TODO: aggiungere un link a una pagina per la modifica della password!
+</body>
+</html>
+";
 
-//$mail->CharSet = 'UTF-8';
+// Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
+// More headers
+    $headers .= 'From: <info@archimedeschool.it>' . "\r\n";
 
-$mail->isSMTP();
-$mail->Host       = 'prohosting3.netsons.net';
+    mail($to, $subject, $message, $headers);
 
-$mail->SMTPSecure = 'tls';
-$mail->Port       = 465;
-$mail->SMTPDebug  = 1;
-$mail->SMTPAuth   = true;
-$mail->Username   = 'info@archimedeschool.it';
-$mail->Password   = 'xmgA5044M';
-
-$mail->setFrom('info@archimedeschool.it', 'ArchimedeSchool');
-$mail->addAddress('manuel32@hotmail.it', 'Manuel');
-$mail->Subject = 'Recovery';
-$mail->Body     = 'User: manuel32@hotmail.it\nPassword: ciaociao';
-
-if(!$mail->send()) {
-    echo 'Message was not sent.';
-    echo 'Mailer error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent.';
+    echo "<p><h1>email inviata con successo!</h1></p>";
 }
-
+else
+{
+    echo "<p><h1>La email utilizzata non è registrata!</h1></p>";
+}
 ?>
-
