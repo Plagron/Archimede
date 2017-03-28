@@ -90,7 +90,7 @@
                                             </tr>
                                         </table>
 
-                                        <input type="checkbox" name="disp[]" >
+                                        <input type="checkbox" name="disp[]" required>
                                         <label><h6>Richiesta di consenso al trattamento dei dati personali(ai sensi dell'articolo 13 del <a href="http://www.camera.it/parlam/leggi/deleghe/03196dl.htm">decreto legislativo numero 196/2003</a> in materia dei dati personali)</h6></label><br><br><br>
 
                                         <input id="submit_btn" type="submit" value="Registrati">

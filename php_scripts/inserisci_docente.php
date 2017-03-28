@@ -2,6 +2,7 @@
 date_default_timezone_set('Europe/Rome');
 session_start();
 $date = date('Y-m-d');
+$data_pagamento = date_format('0000-00-00','Y-m-d');
 
 include ('DB_connection.php');
 
@@ -90,7 +91,7 @@ else {
     $query2 = "INSERT INTO docenti
           (email, cellulare, disp_lun, disp_mar, disp_mer, disp_gio, disp_ven, disp_sab, disp_dom, prezzo_ora, pagamento_iscrizione, vuole_voto, materie)
           VALUES
-          ('$email', '$cellulare', '$disp_lun', '$disp_mar', '$disp_mer', '$disp_gio', '$disp_ven', '$disp_sab', '$disp_dom','$prezzo_ora','$date','$vuole_voto','$materie');";
+          ('$email', '$cellulare', '$disp_lun', '$disp_mar', '$disp_mer', '$disp_gio', '$disp_ven', '$disp_sab', '$disp_dom','$prezzo_ora','$data_pagamento','$vuole_voto','$materie');";
 
     $conn -> query($query);
     $res = $conn -> query($query2);
