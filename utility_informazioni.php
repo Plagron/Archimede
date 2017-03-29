@@ -19,9 +19,9 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">Generali </h2>
                 <hr class="light">
-                <p class="text-faded">Il sito Arichimede è una piattaforma che permette ai professori iscritti di avere una propria bacheca su cui esporre la propria esperienza e dati inerenti al curriculum per mettere in evidenza le proprie capacità. </p>
-                <p class="text-faded">Tutti i dati inseriti dagli utenti per la loro registrazione sono manipolati nel rispettano i le norme che tutelano la privacy.</p>
-                <p class="text-faded">Il proprietario del sito ritiene astenuto da tutte le responsabilità (civili/penali) degli incontri studente/professore, perchè rispettino il fine per il quale il sito è stato progettato.</p>
+                <p class="text-faded">Il sito Arichimede è una piattaforma che permette ai professori iscritti di avere una propria bacheca su cui esporre la propria esperienza, dati inerenti al curriculum e per mettere in evidenza le proprie capacità. </p>
+                <p class="text-faded">Tutti i dati inseriti dagli utenti per la loro registrazione sono manipolati nel rispetto delle norme che tutelano la privacy.</p>
+                <p class="text-faded">Il proprietario del sito è astenuto da tutte le responsabilità (civili/penali) degli incontri studente/professore, perchè rispettino il fine per il quale il sito è stato progettato.</p>
                 <a href="#cima" class="page-scroll btn btn-default btn-xl sr-button">Indietro</a>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 <p class="text-faded">Si mettono a disposizione concedendo agli studenti iscritti di ottenere supporto tramite delle lezioni private che vengono prenotate con il consenso del docente da loro scelto.</p>
                 <p class="text-faded">Mettono in evidenza la loro tariffa oraria e si prendono la responsabilità che il pagamento venga effettuato in tutta legalità.</p>
                 <p class="text-faded">Sono tenuti a rispondere alle richieste degli studenti che richiedono informazioni.</p>
-                <p class="text-faded">Sono soggetti a un abbonamento (50€/300gg), che deve essere pagato ai fini di mantenere attiva la propria bacheca. Dal momento in cui non venga pagato l’abbinamento il professore sarà esentato dalla possibilità di dare lezioni e di modificare la propria bacheca.</p>
+                <p class="text-faded">Sono soggetti a un abbonamento (50€/300gg), che deve essere pagato ai fini di mantenere attiva la propria bacheca e coprire i costi del servizio offerto. Dal momento in cui non venga pagato l’abbonamento il professore sarà esentato dalla possibilità di dare lezioni e di modificare la propria bacheca.</p>
                 <p><h3>Sanzioni</h3></p>
                 <p><h4>Nel caso non vengano rispettate le regole sopra imposte e eccessive segnalazioni di un utente come cattivo utente, successivamente a una analisi delle segnalazioni verranno presi i seguenti provvedimenti: </h4></p>
                 <p class="text-faded">Disattivazione momentanea dell’account (studente/professore) che può andare da 1 mese fino al massimo della sanzione che non permetterà più l’utilizzo della piattaforma da parte dell’utnete.</p>

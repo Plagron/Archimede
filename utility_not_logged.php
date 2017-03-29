@@ -6,7 +6,8 @@
 
             <!--<img href="#page-top" src="img/logo.png" width="300" height="300"> </img> -->
             <h1 id="homeHeading">Mi dispiace... Non sei loggato</h1>
-            <p><h4>Inserisci le tue credenziali per accedere al servizio offerto!</p>
+            <p><h4>Inserisci le tue credenziali per accedere al servizio offerto!</h4></p>
+            <p><h4>Per recuperare la password clicca <a href="check_recovery.php">quì</a></h4></p>
             <hr>
             <p><h2>Altrimenti se non sei ancora iscritto alla piattaforma registrati cliccando sul pulsante sotto che ti rispecchia.</h2></p>
             <a href="registra_studente.php" class="btn btn-primary btn-xl page-scroll" >Studente</a>

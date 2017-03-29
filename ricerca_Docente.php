@@ -5,7 +5,7 @@
  * Date: 01/03/2017
  * Time: 17:00
  */
-include ('php_scripts/DB_connection.php');
+include 'php_scripts/DB_connection.php';
 include 'header.php';
 
 function dateDifference($date_1 , $date_2 , $differenceFormat = '%a' )

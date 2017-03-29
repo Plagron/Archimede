@@ -103,7 +103,7 @@ else {
         $_SESSION['nome'] = $nome;
         $_SESSION['cognome']= $cognome;
         $conn->close();
-        header('Location: ../utility_conferma_creazione_account_docente.php');
+        include '../utility_conferma_creazione_account_docente.php';
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }

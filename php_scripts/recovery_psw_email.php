@@ -1,7 +1,7 @@
 <?php
 include 'DB_connection.php';
 
-$email = $_POST['email'];
+$email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
 $check = $conn->query("SELECT * FROM utenti WHERE utenti.email = '" . $email . "'");
 
 if($check ->num_rows != 0) {
@@ -15,7 +15,8 @@ if($check ->num_rows != 0) {
 <title>Archimedeschool Recovery</title>
 </head>
 <body>
-TODO: aggiungere un link a una pagina per la modifica della password!
+<p>Clicca sul link seguente per reimpostare la email!</p>
+    <a href='www.archimedeschool.it/rpsw.php?val=$email'>reimposta la password.</a>
 </body>
 </html>
 ";
@@ -33,6 +34,6 @@ TODO: aggiungere un link a una pagina per la modifica della password!
 }
 else
 {
-    echo "<p><h1>La email utilizzata non è registrata!</h1></p>";
+    echo "<p><h1>La email di cui si vuole reimpostare la password non è registrata!</h1></p>";
 }
 ?>

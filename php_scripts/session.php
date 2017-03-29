@@ -43,7 +43,7 @@ if(isset($user) && isset($psw)) {
             $date = date('Y-m-d');
             $_SESSION['ggAttività']=dateDifference($_SESSION['dataiscriz'],$date,'%a'); // variavile che memorizza i giorni di attività del profilo rispetto alla data di registrazione.
 
-            if ( $_SESSION['ggAttività'] > 365)   // controllo Attività di un prof per settare il parametro.
+            if ( $_SESSION['ggAttività'] > 300)   // controllo Attività di un prof per settare il parametro.
             {
                 $_SESSION['attivo'] = false;//$rows['attivo']; // il flag per individuare un professore NON attivo.
             }
